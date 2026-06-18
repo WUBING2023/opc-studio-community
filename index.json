@@ -1,0 +1,196 @@
+{
+  "templates": [
+    {
+      "id": "fullstack-saas",
+      "title": "Fullstack SaaS Team",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "fullstack",
+        "saas",
+        "web"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z",
+      "agentCount": 11
+    },
+    {
+      "id": "open-source-maintainer",
+      "title": "Open Source Maintainer",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "open-source",
+        "maintenance",
+        "github"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z",
+      "agentCount": 7
+    },
+    {
+      "id": "security-audit-squad",
+      "title": "Security Audit Squad",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "security",
+        "audit",
+        "compliance"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z",
+      "agentCount": 6
+    }
+  ],
+  "agents": [
+    {
+      "id": "typescript-guru",
+      "title": "TypeScript Guru",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "role": "dev",
+      "tags": [
+        "typescript",
+        "frontend",
+        "type-system"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "rust-systems-dev",
+      "title": "Rust Systems Dev",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "role": "dev",
+      "tags": [
+        "rust",
+        "systems",
+        "performance"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "security-architect",
+      "title": "Security Architect",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "role": "security",
+      "tags": [
+        "security",
+        "architecture",
+        "zero-trust"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "ux-researcher",
+      "title": "UX Researcher",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "role": "dev",
+      "tags": [
+        "ux",
+        "design",
+        "research"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps Engineer",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "role": "dev",
+      "tags": [
+        "devops",
+        "cloud",
+        "automation"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "code-review-prompt",
+      "title": "Code Review Prompt",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "code-review",
+        "quality"
+      ],
+      "downloads": 0,
+      "stars": 1,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "api-design-review",
+      "title": "API Design Review Prompt",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "api",
+        "design",
+        "backend"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "bug-investigation",
+      "title": "Bug Investigation Prompt",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "debugging",
+        "bug-fix"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "system-architecture-review",
+      "title": "System Architecture Review Prompt",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "architecture",
+        "system-design",
+        "review"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    },
+    {
+      "id": "release-checklist",
+      "title": "Release Checklist Prompt",
+      "author": "OPC Community",
+      "authorGitHub": "opc-studio",
+      "tags": [
+        "devops",
+        "release",
+        "checklist"
+      ],
+      "downloads": 0,
+      "stars": 0,
+      "createdAt": "2026-06-01T00:00:00Z"
+    }
+  ]
+}

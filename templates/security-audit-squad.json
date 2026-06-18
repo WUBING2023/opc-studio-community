@@ -1,0 +1,150 @@
+{
+  "id": "security-audit-squad",
+  "title": "Security Audit Squad",
+  "description": "专业安全审计团队，覆盖代码审计、渗透测试、合规检查和安全报告生成。6 个 Agent 从多维度保障系统安全。",
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "createdAt": "2026-06-01T00:00:00Z",
+  "tags": [
+    "security",
+    "audit",
+    "compliance"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "readme": "# Security Audit Squad\n\n## 团队结构\n- **CEO**: 审计项目总指挥\n- **Security Lead**: 安全策略制定，风险评估\n- **Security Auditor**: 代码安全审查，漏洞分析\n- **Penetration Tester**: 渗透测试，攻击面分析\n- **Compliance Analyst**: 合规检查，标准对齐\n- **Report Writer**: 审计报告生成\n\n## 适用场景\n- Web 应用安全审计\n- API 安全评估\n- 合规检查 (SOC2, ISO27001)\n- 第三方依赖漏洞扫描",
+  "agents": [
+    {
+      "childrenIds": [
+        "lead"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "ceo",
+      "name": "CEO",
+      "role": "ceo",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [
+        "auditor",
+        "pentest",
+        "compliance",
+        "reporter"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "lead",
+      "name": "Security Lead",
+      "role": "lead",
+      "parentId": "ceo",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "auditor",
+      "name": "Security Auditor",
+      "role": "security",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "pentest",
+      "name": "Penetration Tester",
+      "role": "security",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "compliance",
+      "name": "Compliance Analyst",
+      "role": "security",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "reporter",
+      "name": "Report Writer",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "MiniMax-M3",
+      "provider": "minimax"
+    }
+  ],
+  "recommendedConfig": {
+    "defaultModel": "claude-sonnet-4-6",
+    "budget": {
+      "totalUsd": 20,
+      "maxTokensPerTask": 300000
+    },
+    "permissions": {
+      "allowShell": false,
+      "allowFileWrite": true,
+      "allowWebAccess": false
+    }
+  }
+}

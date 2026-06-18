@@ -1,0 +1,16 @@
+{
+  "id": "api-design-review",
+  "name": "API Design Review Prompt",
+  "content": "Evaluate the following API design:\n1. RESTful conventions — resource naming, HTTP verbs, status codes\n2. Consistency — naming conventions, pagination, error format\n3. Versioning — is there a clear versioning strategy?\n4. Documentation — are endpoints self-describing?\n5. Security — authentication, rate limiting, input validation\n\nSuggest concrete improvements prioritized by impact.",
+  "enabled": true,
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "tags": [
+    "api",
+    "design",
+    "backend"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "createdAt": "2026-06-01T00:00:00Z"
+}

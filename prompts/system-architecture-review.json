@@ -1,0 +1,16 @@
+{
+  "id": "system-architecture-review",
+  "name": "System Architecture Review Prompt",
+  "content": "Review this system architecture considering:\n1. Scalability — can it handle 10x growth?\n2. Reliability — what are the failure modes?\n3. Security — threat model and attack surface\n4. Cost efficiency — are resources appropriately used?\n5. Observability — how is the system monitored?\n\nFor each area, identify risks and propose mitigations. Use the following format:\n### {Area}\n- Risk: {description} (Severity: High/Medium/Low)\n- Mitigation: {concrete action}",
+  "enabled": true,
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "tags": [
+    "architecture",
+    "system-design",
+    "review"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "createdAt": "2026-06-01T00:00:00Z"
+}

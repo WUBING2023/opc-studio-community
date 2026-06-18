@@ -1,0 +1,16 @@
+{
+  "id": "release-checklist",
+  "name": "Release Checklist Prompt",
+  "content": "Generate a release checklist for the current project state:\n1. Verify all tests pass (unit, integration, e2e)\n2. Check for uncommitted changes in critical paths\n3. Review CHANGELOG.md for completeness\n4. Verify database migrations are reversible\n5. Check API version compatibility\n6. Confirm monitoring dashboards are updated\n7. Review rollback procedure\n8. Validate deployment manifests/configs\n\nFor each item, indicate PASS/FAIL/WARN with a one-line note.",
+  "enabled": true,
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "tags": [
+    "devops",
+    "release",
+    "checklist"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "createdAt": "2026-06-01T00:00:00Z"
+}

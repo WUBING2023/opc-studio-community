@@ -1,0 +1,250 @@
+{
+  "id": "fullstack-saas",
+  "title": "Fullstack SaaS Team",
+  "description": "完整的 SaaS 产品开发团队，覆盖从前端到后端、从数据库到机器学习、从测试到安全的全部角色。11 个 Agent 协同工作，适合快速从零构建 SaaS 产品。",
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "createdAt": "2026-06-01T00:00:00Z",
+  "tags": [
+    "fullstack",
+    "saas",
+    "web"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "readme": "# Fullstack SaaS Team\n\n## 团队结构\n- **CEO**: 项目总指挥，负责任务分发与进度统筹\n- **Tech Lead**: 技术负责人，需求分析与架构决策\n- **Architect**: 系统架构设计，技术选型\n- **Frontend Dev**: React/Next.js 前端开发\n- **Backend Dev**: Node.js/Python 后端 API 开发\n- **Database Dev**: 数据模型设计与查询优化\n- **ML Engineer**: 机器学习模型开发与部署\n- **QA Engineer**: 自动化测试与质量保障\n- **DevOps**: CI/CD 与部署运维\n- **Security**: 安全审计与防护\n- **Docs Writer**: 技术文档与 API 文档\n\n## 适用场景\n- 从零构建 SaaS 产品 MVP\n- 快速迭代产品功能\n- 全栈 Web 应用开发\n\n## 推荐配置\n- 默认模型: deepseek-v4-pro\n- 预算: $10/项目\n- 权限: 允许文件写入，禁止 Shell 访问",
+  "agents": [
+    {
+      "childrenIds": [
+        "lead"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "ceo",
+      "name": "CEO",
+      "role": "ceo",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [
+        "architect",
+        "dev-fe",
+        "dev-be",
+        "dev-db",
+        "dev-ml",
+        "test",
+        "ops",
+        "security",
+        "docs"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "lead",
+      "name": "Tech Lead",
+      "role": "lead",
+      "parentId": "ceo",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "architect",
+      "name": "Architect",
+      "role": "architect",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "dev-fe",
+      "name": "Frontend Dev",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "dev-be",
+      "name": "Backend Dev",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "dev-db",
+      "name": "Database Dev",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "dev-ml",
+      "name": "ML Engineer",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "MiniMax-M3",
+      "provider": "minimax"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "test",
+      "name": "QA Engineer",
+      "role": "test",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "ops",
+      "name": "DevOps",
+      "role": "ops",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "security",
+      "name": "Security",
+      "role": "security",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "docs",
+      "name": "Docs Writer",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "MiniMax-M3",
+      "provider": "minimax"
+    }
+  ],
+  "recommendedConfig": {
+    "defaultModel": "deepseek-v4-pro",
+    "budget": {
+      "totalUsd": 10,
+      "maxTokensPerTask": 200000
+    },
+    "permissions": {
+      "allowShell": false,
+      "allowFileWrite": true,
+      "allowWebAccess": false
+    }
+  }
+}

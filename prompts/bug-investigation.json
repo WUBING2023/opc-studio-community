@@ -1,0 +1,15 @@
+{
+  "id": "bug-investigation",
+  "name": "Bug Investigation Prompt",
+  "content": "Investigate the following bug report:\n\n## Bug Description\n{bug_description}\n\n## Steps to Reproduce\n{steps}\n\n## Expected vs Actual\nExpected: {expected}\nActual: {actual}\n\nAnalyze potential root causes, identify affected code paths, and propose a fix with reasoning. If multiple possible causes exist, list them in order of likelihood.",
+  "enabled": true,
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "tags": [
+    "debugging",
+    "bug-fix"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "createdAt": "2026-06-01T00:00:00Z"
+}

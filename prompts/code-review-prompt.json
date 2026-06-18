@@ -1,0 +1,15 @@
+{
+  "id": "code-review-prompt",
+  "name": "Code Review Prompt",
+  "content": "Review the following code for:\n1. Correctness — does it do what it claims?\n2. Security — are there any vulnerabilities?\n3. Performance — any obvious bottlenecks?\n4. Maintainability — is it clear and well-structured?\n\nProvide specific, actionable feedback with line references.",
+  "enabled": true,
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "tags": [
+    "code-review",
+    "quality"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "createdAt": "2026-06-01T00:00:00Z"
+}

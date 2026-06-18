@@ -1,0 +1,170 @@
+{
+  "id": "open-source-maintainer",
+  "title": "Open Source Maintainer",
+  "description": "专为开源项目维护设计的团队，包含代码审查、测试、文档和社区管理角色。7 个 Agent 高效协作，帮你维护高质量的开源项目。",
+  "author": "OPC Community",
+  "authorGitHub": "opc-studio",
+  "createdAt": "2026-06-01T00:00:00Z",
+  "tags": [
+    "open-source",
+    "maintenance",
+    "github"
+  ],
+  "downloads": 0,
+  "stars": 0,
+  "readme": "# Open Source Maintainer\n\n## 团队结构\n- **CEO**: 项目方向决策\n- **Maintainer Lead**: 技术路线规划，Issue 优先级排序\n- **Core Dev**: 核心功能开发与 Bug 修复\n- **Code Reviewer**: PR Review，代码质量把控\n- **Test Engineer**: 测试覆盖率，CI 流水线维护\n- **Docs Maintainer**: README、CHANGELOG、API 文档\n- **Community Manager**: Issue Triage，讨论区管理\n\n## 适用场景\n- 维护已有开源项目\n- 处理 Issue 和 PR 积压\n- 版本发布管理\n- 社区运营与增长",
+  "agents": [
+    {
+      "childrenIds": [
+        "lead"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "ceo",
+      "name": "CEO",
+      "role": "ceo",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [
+        "dev",
+        "reviewer",
+        "test",
+        "docs",
+        "community"
+      ],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "lead",
+      "name": "Maintainer Lead",
+      "role": "lead",
+      "parentId": "ceo",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "dev",
+      "name": "Core Dev",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "reviewer",
+      "name": "Code Reviewer",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "claude-sonnet-4-6",
+      "provider": "anthropic"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "test",
+      "name": "Test Engineer",
+      "role": "test",
+      "parentId": "lead",
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "docs",
+      "name": "Docs Maintainer",
+      "role": "dev",
+      "parentId": "lead",
+      "model": "MiniMax-M3",
+      "provider": "minimax"
+    },
+    {
+      "childrenIds": [],
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0,
+      "editable": true,
+      "deletable": false,
+      "enabled": true,
+      "id": "community",
+      "name": "Community Manager",
+      "role": "ops",
+      "parentId": "lead",
+      "model": "MiniMax-M3",
+      "provider": "minimax"
+    }
+  ],
+  "recommendedConfig": {
+    "defaultModel": "deepseek-v4-pro",
+    "budget": {
+      "totalUsd": 5,
+      "maxTokensPerTask": 100000
+    },
+    "permissions": {
+      "allowShell": true,
+      "allowFileWrite": true,
+      "allowWebAccess": true
+    }
+  }
+}
