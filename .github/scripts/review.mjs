@@ -70,10 +70,13 @@ async function main() {
     if (String(hj.author).toLowerCase() !== prAuthor) return reject(`\`${p}\` 的 author(@${hj.author})必须是你自己(@${process.env.PR_AUTHOR}),不能冒名`);
     const baseName = p.split("/").pop().replace(/\.json$/, "");
     if (baseName !== String(hj.id)) return reject(`文件名(${baseName})必须等于 id(${hj.id})`);
+    // 结构校验:拒绝"空壳"(只有名字/描述的无效卡片)。团队模板须含 agents,worker 须含 agent 内容。
+    if (p.startsWith("templates/") && (!Array.isArray(hj.agents) || hj.agents.length === 0)) return reject(`\`${p}\`:团队模板必须包含至少一个 agent(不能是空壳模板)`);
+    if (p.startsWith("agents/") && (!hj.agent || typeof hj.agent !== "object")) return reject(`\`${p}\`:worker 缺少 agent 内容(空壳)`);
 
-    if (f.status === "modified") { // 改的若是已存在文件,基线 author 也必须是你
+    if (f.status === "modified") { // 改的若是已存在文件,基线 author 也必须是你(基线无 author 也 fail-closed 拒绝,防接管)
       const base = await raw(p, baseSha);
-      if (base != null) { let bj; try { bj = JSON.parse(base); } catch { bj = {}; } if (bj.author && String(bj.author).toLowerCase() !== prAuthor) return reject(`不能修改别人的内容(\`${p}\` 属于 @${bj.author})`); }
+      if (base != null) { let bj; try { bj = JSON.parse(base); } catch { bj = {}; } if (String(bj.author || "").toLowerCase() !== prAuthor) return reject(`不能修改别人的内容(\`${p}\` 属于 @${bj.author || "?"})`); }
     }
   }
   await approveMerge();
