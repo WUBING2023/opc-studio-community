@@ -1,0 +1,13 @@
+{
+  "id": "opc-live-test-1782869781811",
+  "title": "OPC Live Test (auto-cleanup)",
+  "description": "Live end-to-end test of GitHub auto-review. Safe to delete.",
+  "author": "WUBING2023",
+  "tags": [
+    "test"
+  ],
+  "agents": [],
+  "createdAt": "2026-07-01T01:36:21.811Z",
+  "downloads": 0,
+  "stars": 0
+}
