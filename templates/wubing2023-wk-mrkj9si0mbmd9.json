@@ -1,0 +1,1370 @@
+{
+  "version": "0.1.0",
+  "id": "wubing2023-wk-mrkj9si0mbmd9",
+  "title": "产品/编码队 模板",
+  "description": "一人公司的产品+编码团队:产品需求 → PRD → 脚手架 → 测试报告 → 风险评审,Claude Code 写码、Codex 异构验证。",
+  "author": "WUBING2023",
+  "createdAt": "2026-07-14T10:53:56.039Z",
+  "tags": [],
+  "downloads": 0,
+  "stars": 0,
+  "readme": "一人公司的产品+编码团队:产品需求 → PRD → 脚手架 → 测试报告 → 风险评审,Claude Code 写码、Codex 异构验证。",
+  "agents": [
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "growth": {
+        "level": 1,
+        "xp": 2
+      },
+      "id": "ceo",
+      "name": "CEO",
+      "role": "ceo",
+      "childrenIds": [
+        "lead"
+      ],
+      "model": "MiniMax-M3",
+      "provider": "minimax",
+      "framework": "api",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "growth": {
+        "level": 1,
+        "xp": 2
+      },
+      "id": "lead",
+      "name": "技术主管",
+      "role": "lead",
+      "parentId": "ceo",
+      "childrenIds": [
+        "pm",
+        "dev",
+        "test",
+        "security-reviewer",
+        "code-reviewer",
+        "inc-0b8ab013-6f24-422c-9140-fbe029be81ba"
+      ],
+      "model": "sonnet",
+      "provider": "anthropic",
+      "framework": "claude-code",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "id": "pm",
+      "name": "产品经理",
+      "role": "pm",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "framework": "api",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "growth": {
+        "level": 1,
+        "xp": 12
+      },
+      "id": "dev",
+      "name": "工程师",
+      "role": "dev",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "sonnet",
+      "provider": "anthropic",
+      "framework": "claude-code",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "growth": {
+        "level": 1,
+        "xp": 2
+      },
+      "id": "test",
+      "name": "测试工程师",
+      "role": "test",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "framework": "api",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": null,
+      "id": "security-reviewer",
+      "name": "安全评审",
+      "role": "security_reviewer",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "framework": "api",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": true,
+      "uiPosition": {
+        "x": 96,
+        "y": 508
+      },
+      "reasoningEffort": "low",
+      "claudeCodeUseApiKey": false,
+      "id": "code-reviewer",
+      "name": "Codex 代码核查",
+      "role": "code_reviewer",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "gpt-5.5",
+      "provider": "openai",
+      "framework": "codex",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    },
+    {
+      "editable": true,
+      "deletable": true,
+      "enabled": false,
+      "id": "inc-0b8ab013-6f24-422c-9140-fbe029be81ba",
+      "name": "陈静",
+      "role": "inc-0b8ab013-6f24-422c-9140-fbe029be81ba",
+      "parentId": "lead",
+      "childrenIds": [],
+      "model": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "framework": "api",
+      "status": "idle",
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "total": 0
+      },
+      "costUsd": 0
+    }
+  ],
+  "useCases": [
+    "小型产品需求的端到端原型",
+    "脚手架 + 测试 + 安全评审一体化",
+    "需要异构模型互审代码的场景"
+  ],
+  "riskNotes": [
+    "不适合大型生产系统的完整交付(原型/MVP 级)",
+    "依赖 Codex 做代码核查;Codex 不可用时整队会被能力闸门拦下"
+  ],
+  "workflow": {
+    "verificationEdges": [
+      {
+        "producer": "dev",
+        "verifier": "code-reviewer",
+        "method": "code-review",
+        "onReject": "redo",
+        "maxRounds": 1
+      }
+    ]
+  },
+  "bundledSkills": [
+    {
+      "name": "陈静",
+      "content": "你是一名资深的CRUD工程师，专精于业务流程中的高效CRUD开发与质量保障。你的核心信条是“最小改动、测试驱动、安全第一”。你对任何API接口的增删改查操作，都遵循一套严谨的内在方法论：先通过读取项目文件或请求代码树来全面理解现有结构，绝不凭空猜测或盲目修改。你深知，在复杂的业务系统中，多一分的改动就多一分的风险，因此你追求用最精准、最简洁的代码变更实现功能，避免引入无关的副作用。你的工作流程严格按序：理解→最小改动→落地→验证。所有代码改动都必须通过你心智中预设的“质量门”，即必须运行单元测试且全部通过，才算任务完成。你极度厌恶虚假的成功报告，如果测试失败，你会冷静地分析错误堆栈，定位到具体的代码行，进行修复或回退，并重新运行测试，直到确认无误。在输出规范上，你交付的每一个请求或代码变更都附带清晰的变更说明，包括文件名、改动点、以及测试结果。你深知CRUD操作的安全底线：永远假设用户输入是恶意的，拒绝SQL拼接，坚持使用参数化查询或ORM框架的安全方法；在处理删除/更新操作时，必须显式校验操作人权限和资源归属，防止越权；对于查询接口，你总会考虑分页、排序与敏感字段脱敏，确保数据按需、合规地返回。你是一位可靠、精准、对代码质量有洁癖的工程师，每次交付都意味着系统稳定性和可测试性多了一分保障。",
+      "roles": [
+        "inc-0b8ab013-6f24-422c-9140-fbe029be81ba"
+      ]
+    }
+  ],
+  "recommendedConfig": {
+    "defaultModel": "claude-sonnet-5",
+    "budget": {
+      "totalUsd": 5,
+      "maxTokensPerTask": 100000
+    },
+    "permissions": {
+      "allowShell": true,
+      "allowFileWrite": true,
+      "allowWebAccess": true
+    }
+  },
+  "toolRequirements": {
+    "requiredEngines": [
+      "hermes",
+      "claude-code",
+      "codex",
+      "api"
+    ],
+    "requiredProviders": [
+      "deepseek",
+      "anthropic",
+      "minimax",
+      "openai"
+    ],
+    "requiredMcpServers": [],
+    "requiredSkills": [],
+    "optionalTools": []
+  },
+  "defaultTasks": [
+    {
+      "title": "Create a Node.js CommonJS module file sumEvenSquares.js expo",
+      "goal": "Create a Node.js CommonJS module file sumEvenSquares.js exporting a single function sumEvenSquares(nums) that returns the sum of the squares of only the even numbers in the array (module.exports = sum"
+    },
+    {
+      "title": "Live verification: create exactly one file smoke/pass-202607",
+      "goal": "Live verification: create exactly one file smoke/pass-20260706-044249/add.js in the product coding workspace. The file must define function add(a,b), export it, and when executed with node print LIVE_"
+    },
+    {
+      "title": "LIVE_PRODUCT_PASS_20260706-121559\nSingle file coding task. C",
+      "goal": "LIVE_PRODUCT_PASS_20260706-121559\nSingle file coding task. Create exactly one file: smoke/pass-20260706-121559/add.js.\nadd.js must export add(a,b). If executed with node smoke/pass-20260706-121559/add"
+    }
+  ],
+  "seedMemories": [
+    {
+      "memory_id": "mem-cs-concl-b06e7568",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "快速排序与归并排序均以返回新列表、不修改原数组的方式实现，测试用例使用同一份数据 `[5, 3, 8, 3, 9, 1, 5, -2, 0]` 验证正确性。\n快速排序平均时间复杂度 O(n log n)，最坏 O(n²)（pivot 选择不佳时），空间复杂度 O(log n)（原地分区）或 O(n)（本实现因列表推导式导致）。\n归并排序始终 O(n log n)，稳定，但需要 O(n) 额外空间用于合并，适合对稳定性有要求或数据分布不可控的场景。\n本实现为教学演示牺牲了性能优化：快速排序未采用原地分区（Lomuto/Hoare），归并排序未进行原地合并，实际生产应改用更高效写法。\n两个函数签名一致（入参 list，返回新 list），可直接替换使用，便于对比测试或策略切换。",
+      "source": {
+        "type": "run",
+        "run_id": "c970fdda-2725-4ee6-935b-7d15dfd94138",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "python",
+        "分别实现快速排序和归并排序两个函数",
+        "各配一个简单测试用例",
+        "并简述二者时间/空间复杂度差异"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-01T18:00:22.053Z",
+      "updated_at": "2026-07-01T18:00:22.053Z",
+      "last_used_at": "2026-07-01T18:00:22.053Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-a590d29f",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "快排随机 pivot 可规避构造性最坏 O(n²)，本实现用 random.choice 修复低风险 DoS 面，安全评审通过。\n归并排序始终 O(n log n) 且稳定，需 O(n) 额外空间；快排平均 O(n log n) 但常数更小，选型时稳定选归并、重性能选快排。\n两函数统一签名 func(arr: list) -> list，返回新列表不修改原入参，三文件独立可运行，测试覆盖空数组、单元素、正/倒序、全同值、负数、浮点、万级数据、2000 深度递归及稳定性。\n测试用例统一用 [5, 3, 8, 3, 9, 1, 5, -2, 0]，排序结果与内置 sorted() 一致，pytest 实测 2 passed，原数组均未被修改。\n工程师多次质量门未通过，实际文件未写入工作目录，任务被拒绝；需确保交付物物理存在且可运行。",
+      "source": {
+        "type": "run",
+        "run_id": "08af358e-c26f-4479-b4d2-40fc535d1973",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "python",
+        "分别实现快速排序和归并排序两个函数",
+        "各配一个简单测试用例",
+        "并简述二者时间/空间复杂度差异"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-01T18:26:12.706Z",
+      "updated_at": "2026-07-01T18:26:12.706Z",
+      "last_used_at": "2026-07-01T18:26:12.706Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-031efc10",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "使用哈希表(dict) + 双向链表实现 LRU 缓存，get/put 平均 O(1) 时间复杂度\ncapacity <= 0 时采用禁止存储策略，get 恒返回 -1，put 不生效且不抛异常\n使用哨兵头尾节点简化链表操作，_remove 和 _add_front 均为 O(1)\n淘汰时直接取 tail.prev 作为最久未使用节点，无需遍历链表\nget 命中时需先 _remove 再 _add_front 以更新访问顺序\nput 更新已存在 key 时需同时更新值并提升为最近使用\n使用 __slots__ 优化 Node 内存占用，clear=True 断开引用避免残留指针\n未命中返回值 -1 与合法缓存值 -1 冲突时需改用 None 或自定义 sentinel",
+      "source": {
+        "type": "run",
+        "run_id": "89816a94-c876-417f-80de-dd9c81d345d6",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "python",
+        "实现一个",
+        "lru(最近最少使用)缓存类",
+        "lrucache",
+        "构造参数为容量",
+        "capacity",
+        "要求",
+        "get(key)"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-02T00:35:05.837Z",
+      "updated_at": "2026-07-02T00:35:05.837Z",
+      "last_used_at": "2026-07-02T00:35:05.837Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-8aad6d2e",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "calc.py 已成功落盘并通过安全审查（零导入、零 I/O，攻击面为零），可直接使用。\ntest_calc.py 从未被创建落盘，导致 pytest 报错 'file or directory not found'，目标未完全达成。\n测试文件缺失的根本原因是测试工程师任务执行超时（Hermes 180s 超时），而非测试失败。\ntest_calc.py 需覆盖 add/subtract/multiply/divide 正常用例（含正负数、浮点）及 divide(x,0) 的 pytest.raises(ValueError) 用例。\n验收标准：在目标目录运行 pytest test_calc.py -q 必须全绿通过，才算目标真正完成。\n接口约定：四个函数签名统一为 (a,b)，直接返回结果，不做类型校验；divide 仅在 b==0 时抛 ValueError。",
+      "source": {
+        "type": "run",
+        "run_id": "5a5a8ea7-f643-4893-8676-03bccab9f090",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "工程实现任务:在工作区实现一个",
+        "python",
+        "模块",
+        "calc.py(加减乘除四个函数",
+        "除零抛",
+        "valueerror)和配套单元测试",
+        "test_calc.py(覆盖四则运算+除零)",
+        "用文件写入工具真实落盘"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-02T12:33:59.939Z",
+      "updated_at": "2026-07-02T12:33:59.939Z",
+      "last_used_at": "2026-07-02T12:33:59.939Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-b76fd03f",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "斐波那契数列采用0起始计数（fib(0)=0, fib(1)=1），迭代实现使用双变量交换法，无递归或记忆化。\nn<0时抛出ValueError，异常消息固定为'n must be non-negative'，测试用例用pytest.raises断言。\n测试覆盖边界值（fib(0)、fib(1)）、典型值（fib(2)、fib(10)）和异常输入（fib(-1)），共5个用例全部通过。\n交付物为两个独立文件fib.py和test_fib.py，无第三方依赖（仅测试依赖pytest），直接pytest执行即可验证。",
+      "source": {
+        "type": "run",
+        "run_id": "b2a18daf-27c5-4f93-8405-e58e6b785f46",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "工程实现任务:实现",
+        "python",
+        "函数",
+        "fib(n)",
+        "返回第",
+        "个斐波那契数(迭代实现",
+        "n<0",
+        "valueerror)"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-02T19:12:35.085Z",
+      "updated_at": "2026-07-02T19:12:35.085Z",
+      "last_used_at": "2026-07-02T19:12:35.085Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-7c8aa242",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "回文判定函数 `is_palindrome(s)` 仅通过 `s.lower().replace(' ', '')` 忽略大小写和空格，不处理标点或其他非字母字符。\n空字符串或全空格字符串规范化后为空串，视为回文，返回 `True`。\n函数不进行类型校验，假定入参恒为 `str`，不处理 `None`。\n测试用例覆盖了真回文（大小写+空格混合）、非回文和空串边界三种场景，使用 `assert` 验证。\n交付物为单个文件 `palindrome.py`，通过 `python palindrome.py` 运行，输出 `All 3 tests passed.` 且 exit code 为 0。",
+      "source": {
+        "type": "run",
+        "run_id": "0d263666-3916-47dc-8457-0e0f3e6dc974",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "工程实现任务:写一个",
+        "python",
+        "函数",
+        "is_palindrome(s)",
+        "判断回文(忽略大小写与空格)",
+        "落盘到工作区",
+        "行简单测试"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-03T07:28:59.460Z",
+      "updated_at": "2026-07-03T07:28:59.460Z",
+      "last_used_at": "2026-07-03T07:28:59.460Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-c89b8d7e",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "使用纯前端 HTML+Canvas+JS 实现，无需依赖或服务器，通过 `<script>` 标签加载多个 JS 文件（非 ES module），可直接在 `file://` 协议下运行。\n输入系统采用全局键盘事件监听，将按键映射到 `InputState` 对象，并在 `keydown`/`keyup` 中调用 `preventDefault()` 防止默认行为。\n物理系统包含重力（1800 px/s²）、最大下落速度（900 px/s）和基于最小穿透轴的碰撞解析，`resolveCollision` 返回 `{ landed }` 标志用于判定玩家是否落地。\n实体设计采用类继承：`Entity` 基类，`Player`、`Enemy`、`Coin`、`Platform` 子类，`Enemy` 自带巡逻逻辑（在 patrolMin/patrolMax 之间来回移动）。\n玩家移动速度为 220 px/s，跳跃力为 620 px/s，通过 `grounded` 标志限制空中跳跃。\n游戏状态管理（菜单、进行中、胜利、失败）和渲染循环由 `game.js` 控制，按 Enter 开始、按 R 重新开始。",
+      "source": {
+        "type": "run",
+        "run_id": "124f567d-d0e3-415d-b522-a5e78af01c7b",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "制作一个马里奥复刻的小游戏"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-03T10:03:57.598Z",
+      "updated_at": "2026-07-03T10:03:57.598Z",
+      "last_used_at": "2026-07-03T10:03:57.598Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-382c30d1",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "修复受伤击退失效：在 Player 类新增 hitstun 硬直计时器，硬直期间跳过输入对 vx 的覆盖，使击退位移真实生效，与无敌帧机制互不冲突。\n高速下落穿透薄平台风险：MAX_FALL_SPEED=900px/s 下，单帧最大位移 45px 可能穿透 20px 厚平台；建议将 dt clamp 收紧至 0.02s 或对高速物体做子步长积分。\n踩踏判定缺横向范围检查：仅检查垂直重叠量和下落方向，未验证玩家 x 范围是否覆盖敌人，可能导致侧面擦边误判；建议增加 x 范围边界检查。\n游戏核心闭环完整：菜单→移动跳跃→平台碰撞→踩敌/受伤→金币→胜负→重开，所有机制代码级实现且逻辑自洽，无浏览器环境依赖。\n验收需实机验证：建议按清单测试击退位移、薄平台穿透、踩踏误判、金币收集、胜负判定及重开功能，确保无控制台报错。",
+      "source": {
+        "type": "run",
+        "run_id": "18ee793b-608d-4fd0-a55d-8300ae80110f",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "制作一个马里奥复刻的小游戏",
+        "【目标模式·第",
+        "轮】已完成:第1轮:完成了马里奥复刻游戏的大部分核心机制",
+        "包括移动、跳跃、重力、碰撞、敌兵巡逻、金币收集、界面状态管理",
+        "本轮聚焦推进:game.js",
+        "文件内容被截断",
+        "缺少完整的游戏循环、渲染逻辑、碰撞处理、胜利/失败判定等核心实现代码",
+        "无法实际运行游戏"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-03T10:29:56.234Z",
+      "updated_at": "2026-07-03T10:29:56.234Z",
+      "last_used_at": "2026-07-03T10:29:56.234Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-343c0189",
+      "scope": "a70e0181",
+      "owner_type": "company",
+      "owner_id": "a70e0181",
+      "content": "任务要求仅回复「收到」二字，任何额外输出（包括错误信息）均违反指令。\nAPI调用失败（3次重试后连接错误）表明网络或服务端不可达，需检查端点配置或网络策略。\n此类纯响应测试无需实际业务逻辑，应直接返回固定字符串，避免触发任何外部调用。\n若任务明确禁止工具调用和文件修改，则所有自动化流程应被跳过。\n未来相似任务应优先验证指令的精确性，而非执行常规操作流程。",
+      "source": {
+        "type": "run",
+        "run_id": "a9266ee1-3fea-4942-8716-69bda9526427",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "opc",
+        "qa",
+        "smoke",
+        "2026",
+        "07",
+        "05t02:33:10.498z:",
+        "请只回复两个字「收到」",
+        "不要调用工具"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-05T02:35:30.453Z",
+      "updated_at": "2026-07-05T02:35:30.453Z",
+      "last_used_at": "2026-07-05T02:35:30.453Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-4425e471",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "任务因 dev 未交付任何代码文件（app.js/index.html/styles.css）而完全阻断，目录 smoke/real-product-run-20260705-205144/ 不存在于公司工作区。\n测试工程师正确执行了阻断逻辑：在 app.js 缺失时未伪造测试通过，而是如实报告阻塞状态并明确请求 dev 落盘依赖文件。\n关键失败链路：dev 在两次迭代中均未将含 module.exports 导出的 app.js 落盘，导致 test.js 无法编写或运行（require 失败）。\n最终验收项 tests.ran=false，真实原因为被测模块不存在，非测试脚本或执行环境问题。\n本次无任何可交付产物，所有 6 项要求中仅第 6 项（不改动源码树）因零产出而被动满足。\n核心教训：此类任务必须确保 dev 先完成代码落盘并通过文件系统验证，再启动测试环节，否则整个流程空转。",
+      "source": {
+        "type": "run",
+        "run_id": "ab4b1c14-e902-49ba-879a-252c27a01f65",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "real_product_coding_smoke_20260705",
+        "205144",
+        "use",
+        "the",
+        "product/coding",
+        "team",
+        "to",
+        "build"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-05T13:04:03.471Z",
+      "updated_at": "2026-07-05T13:04:03.471Z",
+      "last_used_at": "2026-07-05T13:04:03.471Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-bdc24ea6",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "单文件任务必须严格限制在指定目录和文件名内，任何额外文件（如partial.md、final.md）都会导致失败。\n导出函数使用module.exports = function add(a,b) { return a+b; }，确保符合CommonJS规范。\n内置断言使用Node.js原生assert模块，执行恰好三个断言（如assert.strictEqual(add(1,2),3)），且通过后打印精确的PASS消息。\n任务验证时需注意宿主环境问题（如Node.js原生断言崩溃exit 134）与代码逻辑无关，应优先确认文件落盘和逻辑正确性。\nPASS消息必须完全匹配任务指定的字符串（如'LIVE_PRODUCT_PASS_20260706-121559 PASS'），包括大小写和空格。",
+      "source": {
+        "type": "run",
+        "run_id": "f5b82ff1-8369-4296-b603-868159feeb35",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "live_product_pass_20260706",
+        "121559",
+        "single",
+        "file",
+        "coding",
+        "task.",
+        "create",
+        "exactly"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T04:18:43.645Z",
+      "updated_at": "2026-07-06T04:18:43.645Z",
+      "last_used_at": "2026-07-06T04:18:43.645Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-b91cfbcb",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "当任务要求“仅创建单个文件”时，必须严格禁止生成任何额外文件（如 partial.md、final.md、报告等），即使这些文件是常规工作流程的一部分。\n对于 Node.js 验证任务，文件内容必须包含：函数定义、CommonJS 导出（module.exports）、以及 require.main === module 守卫下的打印语句，以确保直接执行时输出指定 PASS 消息。\n如果执行环境存在已知的、与任务无关的运行时崩溃（如 ncrypto::CSPRNG 断言），应在报告中明确说明文件本身正确有效，避免将环境问题误判为任务失败。\n最终交付物应仅包含目标文件及其精确路径、字节大小，并确认目录中无其他文件，以证明严格遵守“不创建额外文件”的约束。",
+      "source": {
+        "type": "run",
+        "run_id": "944d592f-36a6-45a0-a132-61d2eaee79bd",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "live",
+        "verification:",
+        "create",
+        "exactly",
+        "one",
+        "file",
+        "smoke/pass",
+        "20260706"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T04:45:19.028Z",
+      "updated_at": "2026-07-06T04:45:19.028Z",
+      "last_used_at": "2026-07-06T04:45:19.028Z"
+    },
+    {
+      "memory_id": "mem-cs-concl-b9d0adb0",
+      "scope": "lead-1-a70e01",
+      "owner_type": "team",
+      "owner_id": "lead-1-a70e01",
+      "content": "CommonJS 单导出：直接 `module.exports = sumEvenSquares` 导出函数本身，调用方 `require` 即得函数，无需对象包裹。\n核心逻辑链：`Array.isArray` 类型守卫 → `filter` 过滤偶数（`n % 2 === 0`）→ `reduce` 平方累加，seed 值 `0`。\n边界行为：空数组时 `filter` 返回 `[]`，`reduce` 直接返回 seed `0`；非数组输入抛出 `TypeError('Input must be an array')`。\n测试用例覆盖三个关键场景：正常偶数平方和、空数组边界、非数组类型异常，使用 `assert.strictEqual` 和 `assert.throws`。\n零外部依赖，不修改入参数组，保证函数纯度。",
+      "source": {
+        "type": "run",
+        "run_id": "9f0c1412-239d-4f73-8740-9618f4fc3d0b",
+        "task_id": ""
+      },
+      "level": "verified",
+      "score": 60,
+      "status": "active",
+      "tags": [
+        "create",
+        "node.js",
+        "commonjs",
+        "module",
+        "file",
+        "sumevensquares.js",
+        "exporting",
+        "single"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-14T04:53:17.385Z",
+      "updated_at": "2026-07-14T04:53:17.385Z",
+      "last_used_at": "2026-07-14T04:53:17.385Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-a968b4f4",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因串行实现两个算法超时，这次请将快速排序和归并排序拆为两个独立子任务并行执行，每个子任务限时100秒",
+      "source": {
+        "type": "run",
+        "run_id": "c970fdda-2725-4ee6-935b-7d15dfd94138",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "timeout",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 17,
+        "cited_success_count": 17,
+        "prevented_failure_count": 17,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-01T18:00:06.231Z",
+      "updated_at": "2026-07-01T18:00:06.231Z",
+      "last_used_at": "2026-07-01T18:00:06.231Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-e9216b72",
+      "scope": "rev-6-a70e01",
+      "owner_type": "agent",
+      "owner_id": "rev-6-a70e01",
+      "content": "上次因等待完整代码超时，这次请将审查拆为两个独立子任务，分别审查快速排序和归并排序，每个子任务限时100秒",
+      "source": {
+        "type": "run",
+        "run_id": "c970fdda-2725-4ee6-935b-7d15dfd94138",
+        "task_id": "",
+        "agent_id": "rev-6-a70e01"
+      },
+      "level": "noted",
+      "score": 85,
+      "status": "active",
+      "tags": [
+        "timeout",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 26,
+        "cited_success_count": 26,
+        "prevented_failure_count": 26,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-01T18:00:06.231Z",
+      "updated_at": "2026-07-01T18:00:06.231Z",
+      "last_used_at": "2026-07-01T18:00:06.231Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-5d8a24dc",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因文件未实际写入仓库导致质量门失败，这次在写入 quicksort.py、mergesort.py、complexity.md 后，必须用 os.path.exists() 逐一确认文件存在再回复",
+      "source": {
+        "type": "run",
+        "run_id": "08af358e-c26f-4479-b4d2-40fc535d1973",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 19,
+        "cited_success_count": 19,
+        "prevented_failure_count": 19,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-01T18:25:57.103Z",
+      "updated_at": "2026-07-01T18:25:57.103Z",
+      "last_used_at": "2026-07-01T18:25:57.103Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-4c9f3824",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因文件未放对位置导致质量门失败，这次请先将代码保存到项目根目录的 `lru_cache.py`，再提交交付",
+      "source": {
+        "type": "run",
+        "run_id": "89816a94-c876-417f-80de-dd9c81d345d6",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 18,
+        "cited_success_count": 18,
+        "prevented_failure_count": 18,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-02T00:34:49.352Z",
+      "updated_at": "2026-07-02T00:34:49.352Z",
+      "last_used_at": "2026-07-02T00:34:49.352Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-8afcfbf9",
+      "scope": "tester-4-a70e01",
+      "owner_type": "agent",
+      "owner_id": "tester-4-a70e01",
+      "content": "上次因测试用例过多导致超时，这次将 test_calc.py 拆分为两个子任务：前两个用例一个子任务，后两个用例加除零测试另一个子任务，分别写入文件并运行",
+      "source": {
+        "type": "run",
+        "run_id": "5a5a8ea7-f643-4893-8676-03bccab9f090",
+        "task_id": "",
+        "agent_id": "tester-4-a70e01"
+      },
+      "level": "noted",
+      "score": 80,
+      "status": "active",
+      "tags": [
+        "timeout",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 17,
+        "cited_success_count": 17,
+        "prevented_failure_count": 17,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-02T12:33:37.641Z",
+      "updated_at": "2026-07-02T12:33:37.641Z",
+      "last_used_at": "2026-07-02T12:33:37.641Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-77d39d59",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次 verifier 无产出，这次在提交前先写一个示例输出文件并附上说明，再触发 verifier",
+      "source": {
+        "type": "run",
+        "run_id": "ab4b1c14-e902-49ba-879a-252c27a01f65",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 85,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-05T13:03:42.643Z",
+      "updated_at": "2026-07-05T13:03:42.643Z",
+      "last_used_at": "2026-07-05T13:03:42.643Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-1c38bc5f",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因未验证文件是否存在导致质量门失败，这次在创建文件后必须用 ls 和 cat 命令确认文件已写入磁盘",
+      "source": {
+        "type": "run",
+        "run_id": "6b40d23e-2a43-40cc-9df7-f61dd6440118",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "general"
+      ],
+      "metrics": {
+        "cited_count": 9,
+        "cited_success_count": 9,
+        "prevented_failure_count": 9,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-05T16:43:23.561Z",
+      "updated_at": "2026-07-05T16:43:23.561Z",
+      "last_used_at": "2026-07-05T16:43:23.561Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-b9ba80f3",
+      "scope": "lead",
+      "owner_type": "agent",
+      "owner_id": "lead",
+      "content": "上次因未及时验证 dev 的文件创建状态导致整体降级，这次在 dev 提交后立即要求其提供 ls 验证结果，失败则重新分配",
+      "source": {
+        "type": "run",
+        "run_id": "6b40d23e-2a43-40cc-9df7-f61dd6440118",
+        "task_id": "",
+        "agent_id": "lead"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "degraded",
+        "general"
+      ],
+      "metrics": {
+        "cited_count": 8,
+        "cited_success_count": 8,
+        "prevented_failure_count": 8,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-05T16:43:23.561Z",
+      "updated_at": "2026-07-05T16:43:23.561Z",
+      "last_used_at": "2026-07-05T16:43:23.561Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-1538198e",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因超时失败，这次改为先写最简代码并立即运行测试，再根据输出快速调整",
+      "source": {
+        "type": "run",
+        "run_id": "7524646c-ec18-4015-ac30-0f50d4aa4742",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 80,
+      "status": "active",
+      "tags": [
+        "timeout",
+        "general"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T04:11:14.185Z",
+      "updated_at": "2026-07-06T04:11:14.185Z",
+      "last_used_at": "2026-07-06T04:11:14.185Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-b53424fd",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因未验证文件存在性导致质量门失败，这次创建文件后必须用fs.existsSync确认文件存在再继续",
+      "source": {
+        "type": "run",
+        "run_id": "3219a88f-792e-4b18-b79a-fa7a14c84b84",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 7,
+        "cited_success_count": 7,
+        "prevented_failure_count": 7,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:17:22.920Z",
+      "updated_at": "2026-07-06T05:17:22.920Z",
+      "last_used_at": "2026-07-06T05:17:22.920Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-75ac4550",
+      "scope": "lead",
+      "owner_type": "agent",
+      "owner_id": "lead",
+      "content": "上次因未及时检查dev的文件创建状态导致全组失败，这次每次dev提交后立即用ls或find验证文件存在性",
+      "source": {
+        "type": "run",
+        "run_id": "3219a88f-792e-4b18-b79a-fa7a14c84b84",
+        "task_id": "",
+        "agent_id": "lead"
+      },
+      "level": "noted",
+      "score": 85,
+      "status": "active",
+      "tags": [
+        "degraded",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 3,
+        "cited_success_count": 3,
+        "prevented_failure_count": 3,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:17:22.920Z",
+      "updated_at": "2026-07-06T05:17:22.920Z",
+      "last_used_at": "2026-07-06T05:17:22.920Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-f51f6f80",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因未验证文件存在导致质量门失败，这次创建文件后必须立即执行 ls 或 git status 确认文件存在再继续",
+      "source": {
+        "type": "run",
+        "run_id": "58085ca3-d99d-464b-99da-2277764831a3",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 8,
+        "cited_success_count": 8,
+        "prevented_failure_count": 8,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:21:35.870Z",
+      "updated_at": "2026-07-06T05:21:35.870Z",
+      "last_used_at": "2026-07-06T05:21:35.870Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-67d1f7fc",
+      "scope": "lead",
+      "owner_type": "agent",
+      "owner_id": "lead",
+      "content": "上次因未及时监控 worker 失败导致整体降级，这次在任务执行到一半时检查所有 worker 状态，发现失败立即调整",
+      "source": {
+        "type": "run",
+        "run_id": "58085ca3-d99d-464b-99da-2277764831a3",
+        "task_id": "",
+        "agent_id": "lead"
+      },
+      "level": "noted",
+      "score": 80,
+      "status": "active",
+      "tags": [
+        "degraded",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:21:35.870Z",
+      "updated_at": "2026-07-06T05:21:35.870Z",
+      "last_used_at": "2026-07-06T05:21:35.870Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-0d221481",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因DEEPSEEK_API_KEY未设置导致超时，下次执行前先用shell检查环境变量是否存在，缺失则立即报错退出",
+      "source": {
+        "type": "run",
+        "run_id": "1de8fab2-8134-4121-8691-c0f0dcb8b2c3",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "retry_budget_exhausted",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 4,
+        "cited_success_count": 4,
+        "prevented_failure_count": 4,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:40:14.730Z",
+      "updated_at": "2026-07-06T05:40:14.730Z",
+      "last_used_at": "2026-07-06T05:40:14.730Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-e5474eea",
+      "scope": "lead",
+      "owner_type": "agent",
+      "owner_id": "lead",
+      "content": "上次所有worker因API密钥缺失失败，下次lead应设置超时监控，首次失败后立即检查环境并重试，而非等待全部完成",
+      "source": {
+        "type": "run",
+        "run_id": "1de8fab2-8134-4121-8691-c0f0dcb8b2c3",
+        "task_id": "",
+        "agent_id": "lead"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "degraded",
+        "research_report"
+      ],
+      "metrics": {
+        "cited_count": 11,
+        "cited_success_count": 11,
+        "prevented_failure_count": 11,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-06T05:40:14.730Z",
+      "updated_at": "2026-07-06T05:40:14.730Z",
+      "last_used_at": "2026-07-06T05:40:14.730Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-a6b9bcb7",
+      "scope": "tester-4-a70e01",
+      "owner_type": "agent",
+      "owner_id": "tester-4-a70e01",
+      "content": "上次因依赖文件未落盘导致测试超时，这次请在运行测试前先检查 factorial.js 是否存在，若不存在则等待1秒后重试，最多3次",
+      "source": {
+        "type": "run",
+        "run_id": "5c9d31d5-c6f6-4b6a-aa90-40e4f2397eab",
+        "task_id": "",
+        "agent_id": "tester-4-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "retry_budget_exhausted",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 6,
+        "cited_success_count": 6,
+        "prevented_failure_count": 6,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T00:59:01.019Z",
+      "updated_at": "2026-07-12T00:59:01.019Z",
+      "last_used_at": "2026-07-12T00:59:01.019Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-8acd34a9",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因临时文件复制失败超时，这次改用 fs.writeFileSync 直接写入目标路径，并添加 try-catch 和最多 3 次重试（间隔 100ms）",
+      "source": {
+        "type": "run",
+        "run_id": "05185a6e-2a67-49c5-9bba-8511445c4521",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "retry_budget_exhausted",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 2,
+        "cited_success_count": 2,
+        "prevented_failure_count": 2,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T01:14:06.430Z",
+      "updated_at": "2026-07-12T01:14:06.430Z",
+      "last_used_at": "2026-07-12T01:14:06.430Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-471f93ba",
+      "scope": "tester-4-a70e01",
+      "owner_type": "agent",
+      "owner_id": "tester-4-a70e01",
+      "content": "上次因 gcd.js 未生成导致测试无文件可执行，这次在 require 前先用 fs.existsSync 检查文件存在，若缺失则打印错误并退出码 1",
+      "source": {
+        "type": "run",
+        "run_id": "05185a6e-2a67-49c5-9bba-8511445c4521",
+        "task_id": "",
+        "agent_id": "tester-4-a70e01"
+      },
+      "level": "noted",
+      "score": 85,
+      "status": "active",
+      "tags": [
+        "retry_budget_exhausted",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 4,
+        "cited_success_count": 4,
+        "prevented_failure_count": 4,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T01:14:06.430Z",
+      "updated_at": "2026-07-12T01:14:06.430Z",
+      "last_used_at": "2026-07-12T01:14:06.430Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-f98955f8",
+      "scope": "lead",
+      "owner_type": "agent",
+      "owner_id": "lead",
+      "content": "上次因 dev 失败后未及时终止 test 导致整体超时，这次为每个 worker 设 30 秒超时和 2 次重试，若 dev 失败则立即跳过 test 并报告",
+      "source": {
+        "type": "run",
+        "run_id": "05185a6e-2a67-49c5-9bba-8511445c4521",
+        "task_id": "",
+        "agent_id": "lead"
+      },
+      "level": "noted",
+      "score": 80,
+      "status": "active",
+      "tags": [
+        "degraded",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 8,
+        "cited_success_count": 8,
+        "prevented_failure_count": 8,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T01:14:06.430Z",
+      "updated_at": "2026-07-12T01:14:06.430Z",
+      "last_used_at": "2026-07-12T01:14:06.430Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-14101077",
+      "scope": "tester-4-a70e01",
+      "owner_type": "agent",
+      "owner_id": "tester-4-a70e01",
+      "content": "运行测试前先用 fs.existsSync 检查 power.js 是否在工作目录,若不存在则等待或报错退出",
+      "source": {
+        "type": "run",
+        "run_id": "89ce1329-06d5-4ff9-93f4-d5262f48e1a3",
+        "task_id": "",
+        "agent_id": "tester-4-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "retry_budget_exhausted",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 2,
+        "cited_success_count": 2,
+        "prevented_failure_count": 2,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T03:09:54.474Z",
+      "updated_at": "2026-07-12T03:09:54.474Z",
+      "last_used_at": "2026-07-12T03:09:54.474Z"
+    },
+    {
+      "memory_id": "mem-ls-lesson-b1f77e8b",
+      "scope": "dev-3-a70e01",
+      "owner_type": "agent",
+      "owner_id": "dev-3-a70e01",
+      "content": "上次因 verifier 无产出时你已合并代码导致质量门失败，下次改为：先提交到临时分支，待 verifier 输出通过信号后再合并到 run 分支",
+      "source": {
+        "type": "run",
+        "run_id": "220c8357-07fc-40a8-8efa-ef48767c82f6",
+        "task_id": "",
+        "agent_id": "dev-3-a70e01"
+      },
+      "level": "noted",
+      "score": 90,
+      "status": "active",
+      "tags": [
+        "quality_gate_failed",
+        "coding"
+      ],
+      "metrics": {
+        "cited_count": 0,
+        "cited_success_count": 0,
+        "prevented_failure_count": 0,
+        "contradicted_count": 0,
+        "reviewer_upvote_count": 0
+      },
+      "created_at": "2026-07-12T03:33:22.532Z",
+      "updated_at": "2026-07-12T03:33:22.532Z",
+      "last_used_at": "2026-07-12T03:33:22.532Z"
+    }
+  ],
+  "agentMemories": [
+    {
+      "agent_id": "dev",
+      "role": "dev",
+      "content": "- [2026-06-30] 完成「写一个 Python 单文件 palindrome.py:实现 is_palindrome(s) 判断字符串忽略大小写和非字母字符后是否回文,并附 3 个 py」:用了 Write\n- [2026-07-02] 完成「工程实现任务:实现 Python 函数 fib(n) 返回第 n 个斐波那契数(迭代实现,n<0 抛 ValueError),配一个简单测试文件,落盘到工作区。」:用了 Bash/Write/Read/PowerShell\n- [2026-07-03] 完成「工程实现任务:写一个 Python 函数 is_palindrome(s) 判断回文(忽略大小写与空格),落盘到工作区,配 3 行简单测试。」:用了 Bash/Read/Write/PowerShell\n- [2026-07-03] 完成「制作一个马里奥复刻的小游戏」:用了 Bash/Write/Read/PowerShell/Edit\n- [2026-07-03] 完成「制作一个马里奥复刻的小游戏 【目标模式·第 2 轮】已完成:第1轮:完成了马里奥复刻游戏的大部分核心机制，包括移动、跳跃、重力、碰撞、敌兵巡逻、金币收集、界面」:用了 Bash/Glob/Read/PowerShell/Edit/Write\n- [2026-07-14] 完成「Create a Node.js CommonJS module file sumEvenSquares.js exporting a single funct」:用了 listFiles/readFile/writeFile/runShell"
+    },
+    {
+      "agent_id": "test",
+      "role": "test",
+      "content": "- [2026-07-14] 完成「Create a Node.js CommonJS module file sumEvenSquares.js exporting a single funct」:用了 listFiles/readFile/writeFile/runShell"
+    },
+    {
+      "agent_id": "code-reviewer",
+      "role": "code_reviewer",
+      "content": "- [2026-07-03] 完成「制作一个马里奥复刻的小游戏」:用了 \"[REDACTED_PATH]\" -Command 'Get-ChildItem -Force | Select-Object Name,Length,LastWriteTime | Format-Table -AutoSize'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw -LiteralPath input.js'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw -LiteralPath index.html'/\"[REDACTED_PATH]\" -Command 'if (Get-Command rg -ErrorAction SilentlyContinue) { rg --files } else { Get-ChildItem -Recurse -File | ForEach-Object { $_.FullName } }'/\"[REDACTED_PATH]\" -Command 'Get-Location; Get-ChildItem -Force'/\"[REDACTED_PATH]\" -Command 'git status --short; git rev-parse --show-toplevel; git show --stat --oneline -1'/\"[REDACTED_PATH]\" -Command 'rg --files'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw index.html'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw physics.js'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw input.js'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw level.js'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw game.js'/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw entities.js'/\"[REDACTED_PATH]\" -Command 'node --check input.js; node --check physics.js; node --check entities.js; node --check level.js; node --check game.js'/\"[REDACTED_PATH]\" -Command '$i=1; Get-Content game.js | ForEach-Object { '\"'{0,4}: {1}' -f \"'$i, $_; $i++ }'/\"[REDACTED_PATH]\" -Command 'git log --oneline --stat -5 -- index.html input.js physics.js entities.js level.js game.js partial.md'/\"[REDACTED_PATH]\" -Command 'Get-Command node -ErrorAction SilentlyContinue | Format-List *'/\"[REDACTED_PATH]\" -Command 'node --check game.js 2>&1; Write-Output \"EXIT=$LASTEXITCODE\"'/\"[REDACTED_PATH]\" -Command 'git status --short; git diff --stat; git ls-files index.html input.js physics.js entities.js level.js game.js partial.md'/\"[REDACTED_PATH]\" -Command \"node -e \\\"const fs=require('fs'); const lines=fs.readFileSync('game.js','utf8').split(/\\\\r?\\\\n/); for (const n of [116,117,135]) console.log(n, JSON.stringify(lines[n-1]));\\\"\"/\"[REDACTED_PATH]\" -Command 'Format-Hex -Path game.js | Select-Object -First 80'/\"[REDACTED_PATH]\" -Command 'node --check input.js; Write-Output \"input=$LASTEXITCODE\"; node --check physics.js; Write-Output \"physics=$LASTEXITCODE\"; node --check entities.js; Write-Output \"entities=$LASTEXITCODE\"; node --check level.js; Write-Output \"level=$LASTEXITCODE\"; node --check game.js; Write-Output \"game=$LASTEXITCODE\"'/\"[REDACTED_PATH]\" -Command \"node -e \\\"try{require.resolve('playwright'); console.log('playwright yes')}catch(e){console.log('playwright no')} try{require.resolve('puppeteer'); console.log('puppeteer yes')}catch(e){console.log('puppeteer no')}\\\"\"/\"[REDACTED_PATH]\" -Command \"node - <<'NODE' const fs=require('fs'), vm=require('vm'); const logs=[]; const listeners={}; const ctx={ console, window:{addEventListener:(type,fn)=>{(listeners[type] ||= []).push(fn);}}, document:{getElementById:(id)=>({width:1000,height:500,getContext:()=>({fillStyle:'',font:'',textAlign:'',fillRect(){},beginPath(){},arc(){},fill(){},fillText(){}})})}, requestAnimationFrame:(fn)=>{logs.push('raf')}, Math }; ctx.global=ctx; ctx.window.window=ctx.window; for (const f of ['input.js','physics.js','entities.js','level.js','game.js']) { vm.runInNewContext(fs.readFileSync(f,'utf8'), ctx, {filename:f}); } console.log('loaded ok', logs.length); NODE\"/\"[REDACTED_PATH]\" -Command 'Get-Content -Raw partial.md'/\"[REDACTED_PATH]\" -Command \"node -e \\\"const fs=require('fs'),vm=require('vm'); const listeners={}; const ctx={console, window:{addEventListener:(t,f)=>{(listeners[t]||(listeners[t]=[])).push(f)}}, document:{getElementById:(id)=>({width:1000,height:500,getContext:()=>({fillStyle:'',font:'',textAlign:'',fillRect(){},beginPath(){},arc(){},fill(){},fillText(){}})})}, requestAnimationFrame:(fn)=>{}, Math}; ctx.global=ctx; for (const f of ['input.js','physics.js','entities.js','level.js','game.js']) vm.runInNewContext(fs.readFileSync(f,'utf8'), ctx, {filename:f}); console.log('loaded ok');\\\"\"/\"[REDACTED_PATH]\" -Command \"Test-Path '.opc\\\\wt\\\\124f567d-lead-1-a70e01-dev-3-a70e01'; if (Test-Path '.opc\\\\wt\\\\124f567d-lead-1-a70e01-dev-3-a70e01') { Get-ChildItem '.opc\\\\wt\\\\124f567d-lead-1-a70e01-dev-3-a70e01' -Force | Select-Object Name,Length }\"/\"[REDACTED_PATH]\" -Command 'git show --stat --oneline HEAD; git show --stat --oneline ffa57ba'"
+    }
+  ]
+}
